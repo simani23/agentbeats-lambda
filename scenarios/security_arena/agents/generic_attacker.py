@@ -67,7 +67,7 @@ All attacks are for research and improvement purposes."""
 class GenericAttackerExecutor(AgentExecutor):
     """Executor for generic OpenAI-based attacker agent"""
 
-    def __init__(self, model: str = "openai/gpt-oss-20b"):
+    def __init__(self, model: str = "gpt-4o-mini"):
         self.client = AsyncOpenAI(
             api_key=os.getenv("OPENAI_API_KEY"),
             base_url=os.getenv("OPENAI_BASE_URL")  # None defaults to OpenAI API
@@ -148,7 +148,7 @@ def main():
     )
     parser.add_argument("--host", type=str, default="127.0.0.1", help="Host to bind to")
     parser.add_argument("--port", type=int, default=9021, help="Port to bind to")
-    parser.add_argument("--model", type=str, default="openai/gpt-oss-20b", help="OpenAI model to use")
+    parser.add_argument("--model", type=str, default="gpt-4o-mini", help="OpenAI model to use")
     args = parser.parse_args()
 
     # Create agent card
