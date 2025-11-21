@@ -29,22 +29,45 @@ cd agentbeats-lambda
 
 ### 2. Install Dependencies
 
-Requires Python >= 3.11 and [uv](https://docs.astral.sh/uv/).
+Requires Python >= 3.11 and [uv](https://docs.astral.sh/uv/). 
+
+You can install `uv` on Lambda Cloud with the following steps:
+
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh && \
+source ~/.profile
+
+# resolve https://github.com/agentbeats/tutorial/issues/2
+uv python install 3.13 && \
+uv python pin 3.13
+```
 
 ```bash
 uv sync
 ```
 
-### 3. Set Environment Variables
+### 3. Spin Up an Inference Endpoint 
+
+```
+# 1xGPU with 40GB VRAM should work
+sudo docker run --gpus all \
+    -v ~/.cache/huggingface:/root/.cache/huggingface \
+    -p 8000:8000 \
+    --ipc=host \
+    vllm/vllm-openai:latest \
+    --model openai/gpt-oss-20b
+```
+
+### 4. Set Environment Variables
 
 ```bash
-export OPENAI_API_KEY="your-key"
+export OPENAI_API_KEY="anything"
 
 # For local model serving (optional):
 export OPENAI_BASE_URL="http://localhost:8000/v1"
 ```
 
-### 4. Run Lambda Scenarios
+### 5. Run Lambda Scenarios
 
 ```bash
 # PortfolioIQ - Financial advisor manipulation
@@ -54,7 +77,9 @@ uv run agentbeats-run scenarios/security_arena/scenario_portfolioiq.toml
 uv run agentbeats-run scenarios/security_arena/scenario_thingularity.toml
 ```
 
-### 5. Run Example Submission
+Results will be saved to `agentbeats-lambda/results`.
+
+### 6. Run Example Submission
 
 First register in `plugins/registry.py`:
 
