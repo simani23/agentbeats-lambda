@@ -250,6 +250,15 @@ See `SCENARIO_SPECIFICATIONS.md` for detailed scoring breakdown and scenario met
 - Baseline agents for comparison
 - Attacker vs defender team assignments
 
+### Memory Model
+
+| Phase | Attacker | Defender |
+|-------|----------|----------|
+| **Phase 1** | Stateful | Stateless |
+| **Phase 2** | Stateful | Stateful |
+
+In Phase 1, the defender evaluates each attack independently (no memory of previous rounds), while the attacker learns across rounds. Phase 2 introduces full adaptation on both sides.
+
 **Evaluation**:
 - **Weekly Public Leaderboard**: Allows iteration and improvement
 - **Final Private Leaderboard**: Determines winners using held-out scenarios
@@ -288,7 +297,7 @@ export OPENAI_BASE_URL="http://localhost:8000/v1"
 export OPENAI_API_KEY="not-needed"  # Required but unused for local
 
 # Run scenario
-uv run agentbeats-run scenarios/security_arena/scenario_portfolioiq.toml
+
 ```
 
 Both attacker and defender agents will connect to the same server. If `OPENAI_BASE_URL` is not set, agents default to the OpenAI API.

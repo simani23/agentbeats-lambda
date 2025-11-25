@@ -22,7 +22,7 @@ cmd = "python scenarios/security_arena/agents/generic_defender.py --host 127.0.0
 scenario_type = "thingularity"
 
 # Generic arena config
-num_rounds = 5
+num_rounds = 20
 
 # Thingularity-specific config
 hidden_tools = [
