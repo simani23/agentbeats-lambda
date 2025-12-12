@@ -46,6 +46,7 @@ class ArenaResult(BaseModel):
     total_rounds: int = Field(description="Total number of rounds")
     battle_log: list[RoundResult] = Field(description="Detailed log of each round")
     baseline_value: Any | None = Field(default=None, description="Defender's baseline output value")
+    model: str | None = Field(default=None, description="Model used for attacker and defender")
 
     def get_attack_success_rate(self) -> float:
         """Calculate attack success rate (0.0 to 1.0)"""

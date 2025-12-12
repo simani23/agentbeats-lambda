@@ -20,7 +20,7 @@ from a2a.types import (
 )
 
 
-def parse_toml(d: dict[str, object]) -> tuple[EvalRequest, str]:
+def parse_toml(d: dict[str, object], model: str | None = None) -> tuple[EvalRequest, str]:
     green = d.get("green_agent")
     if not isinstance(green, dict) or "endpoint" not in green:
         raise ValueError("green.endpoint is required in TOML")
@@ -36,9 +36,15 @@ def parse_toml(d: dict[str, object]) -> tuple[EvalRequest, str]:
             if role and endpoint:
                 parts[role] = endpoint
 
+    # Get config and add model if provided
+    config = d.get("config", {}) or {}
+    if model:
+        config = config.copy()  # Don't modify original
+        config["model"] = model
+
     eval_req = EvalRequest(
         participants=parts,
-        config=d.get("config", {}) or {}
+        config=config
     )
     return eval_req, green_endpoint
 
@@ -90,8 +96,10 @@ async def event_consumer(event, card: AgentCard):
             print("Unhandled event")
 
 async def main():
+    import os
+    
     if len(sys.argv) < 2:
-        print("Usage: python client_cli.py <scenario.toml>")
+        print("Usage: python client_cli.py <scenario.toml> [--model MODEL]")
         sys.exit(1)
 
     path = Path(sys.argv[1])
@@ -99,10 +107,19 @@ async def main():
         print(f"File not found: {path}")
         sys.exit(1)
 
+    # Get model from command line args or environment variable
+    model = None
+    if "--model" in sys.argv:
+        model_idx = sys.argv.index("--model")
+        if model_idx + 1 < len(sys.argv):
+            model = sys.argv[model_idx + 1]
+    elif os.getenv("AGENTBEATS_MODEL"):
+        model = os.getenv("AGENTBEATS_MODEL")
+
     toml_data = path.read_text()
     data = tomllib.loads(toml_data)
 
-    req, green_url = parse_toml(data)
+    req, green_url = parse_toml(data, model=model)
 
     msg = req.model_dump_json()
     await send_message(msg, green_url, streaming=True, consumer=event_consumer)

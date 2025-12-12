@@ -13,12 +13,26 @@ from .portfolioiq import PortfolioIQPlugin
 from .thingularity import ThingularityPlugin
 from .example_medical import MedicalRecordsPlugin
 
+# Local testing only - participants add their imports here to test locally
+# For final submission, just submit your folder - Lambda handles integration
+from submissions.lambda_example.glitchinthematrix.plugin import GlitchInTheMatrixPlugin
+from .lawfirmleak_vulnerable import LawFirmLeakVulnerablePlugin
+from .lawfirmleak_vulnerable_llm import LawFirmLeakVulnerableLLMPlugin
+from .lawfirmleak_hardened import LawFirmLeakHardenedPlugin
+from .phonepalprobe import PhonePalProbePlugin
+
 
 # Registry mapping scenario names to plugin classes
 SCENARIO_PLUGINS: dict[str, type[ScenarioPlugin]] = {
     "portfolioiq": PortfolioIQPlugin,
     "thingularity": ThingularityPlugin,
     "medical_records": MedicalRecordsPlugin,  # Example custom scenario
+    # Local testing only - add your scenario here to test locally
+    "glitchinthematrix": GlitchInTheMatrixPlugin,
+    "lawFirmLeak_vulnerable": LawFirmLeakVulnerablePlugin,
+    "lawFirmLeak_vulnerable_LLM": LawFirmLeakVulnerableLLMPlugin,
+    "lawFirmLeak_hardened": LawFirmLeakHardenedPlugin,
+    "phonePalProbe": PhonePalProbePlugin,
 }
 
 
