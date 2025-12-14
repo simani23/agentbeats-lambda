@@ -19,7 +19,9 @@ from submissions.lambda_example.glitchinthematrix.plugin import GlitchInTheMatri
 from .lawfirmleak_vulnerable import LawFirmLeakVulnerablePlugin
 from .lawfirmleak_vulnerable_llm import LawFirmLeakVulnerableLLMPlugin
 from .lawfirmleak_hardened import LawFirmLeakHardenedPlugin
-from .phonepalprobe import PhonePalProbePlugin
+from submissions.team_mu.phonepalprobe.plugin import PhonePalProbePlugin
+from submissions.team_mu.phonepalprobe_vulnerable.plugin import PhonePalProbeVulnerablePlugin
+from submissions.team_mu.phonepalprobe_hardened.plugin import PhonePalProbeHardenedPlugin
 
 
 # Registry mapping scenario names to plugin classes
@@ -33,6 +35,8 @@ SCENARIO_PLUGINS: dict[str, type[ScenarioPlugin]] = {
     "lawFirmLeak_vulnerable_LLM": LawFirmLeakVulnerableLLMPlugin,
     "lawFirmLeak_hardened": LawFirmLeakHardenedPlugin,
     "phonePalProbe": PhonePalProbePlugin,
+    "phonePalProbe_vulnerable": PhonePalProbeVulnerablePlugin,
+    "phonePalProbe_hardened": PhonePalProbeHardenedPlugin,
 }
 
 
