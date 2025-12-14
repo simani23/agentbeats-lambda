@@ -20,7 +20,8 @@ def main():
 
     root_agent = Agent(
         name="debater",
-        model="gemini-2.0-flash",
+        #model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         description="Participates in a debate.",
         instruction="You are a professional debater.",
     )

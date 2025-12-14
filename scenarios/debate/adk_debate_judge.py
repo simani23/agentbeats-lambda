@@ -94,7 +94,8 @@ def main():
     tool_provider = ToolProvider()
     root_agent = Agent(
         name="debate_moderator",
-        model="gemini-2.0-flash",
+        #model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         description=(
             "Orchestrate and judge a structured debate between pro and con agents on a given topic with multiple rounds of arguments."
         ),
