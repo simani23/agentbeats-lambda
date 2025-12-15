@@ -17,7 +17,7 @@ cmd = "python scenarios/security_arena/agents/generic_defender.py --host 127.0.0
 [config]
 team_name = "team_mu"
 scenario_type = "lawFirmLeak_vulnerable_LLM"
-num_rounds = 5
+num_rounds = 10
 # Privileged keywords are loaded from the data folder (privileged_keywords.txt)
 
 

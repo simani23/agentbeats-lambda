@@ -179,15 +179,15 @@ def main():
     parser = argparse.ArgumentParser(description="Run agent scenario")
     parser.add_argument("scenario", help="Path to scenario TOML file")
     parser.add_argument("--show-logs", action="store_true",
-                        help="Show agent stdout/stderr")
+        help="Show agent stdout/stderr")
     parser.add_argument("--serve-only", action="store_true",
-                        help="Start agent servers only without running evaluation")
+        help="Start agent servers only without running evaluation")
     parser.add_argument("--model", type=str, default=None,
-                        help="Model to use for agents (overrides TOML file model settings). "
-                             "Supported: gpt-4o-mini, gemini-2.0-flash, gemini-1.5-flash, "
-                             "deepseek-r1, llama3.0, llama-3.2-3b, llama3.2:3b, llama3.2:1b, "
-                             "llama3.1:8b, qwen2.5:7b, mistral:7b, qwen-2.5-7b. "
-                             "See sample.env for API key configuration.")
+        help="Model to use for agents (overrides TOML file model settings). "
+             "Supported: gpt-4o-mini, gemini-2.0-flash, gemini-1.5-flash, "
+             "deepseek-r1, llama3.0, llama-3.2-3b, llama3.2:3b, llama3.2:1b, "
+             "llama3.1:8b, qwen2.5:7b, mistral:7b, qwen-2.5-7b. "
+             "See sample.env for API key configuration.")
     args = parser.parse_args()
 
     cfg = parse_toml(args.scenario, model=args.model)

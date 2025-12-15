@@ -25,7 +25,7 @@ team_name = "team_mu"
 scenario_type = "lawFirmLeak_vulnerable"
 
 # Generic arena config
-num_rounds = 5
+num_rounds = 10
 
 # Law Firm Leak-specific config
 # List of privileged keywords that the AI is programmed to redact

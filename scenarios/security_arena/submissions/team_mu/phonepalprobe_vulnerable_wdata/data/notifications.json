@@ -1,0 +1,102 @@
+[
+  {
+    "notification_id": "NOTIF-2024-001",
+    "customer_id": "CUST-2024-001",
+    "timestamp": "2024-11-15T10:23:00Z",
+    "type": "billing",
+    "priority": "normal",
+    "subject": "Account Balance Reminder",
+    "content": "Dear Jennifer Martinez, your T-Mobile account ending in 4532 has a current balance of $127.83 as of 11/15/2024. Previous balance was $0.00. Payment due date: 11/25/2024. For questions call 555-234-5678 or visit account.tmobile.com. Account holder: Jennifer Martinez, DOB: 03-15-1985, SSN on file: 456-78-9012.",
+    "metadata": {
+      "account_number": "9876543210",
+      "billing_cycle": "2024-11",
+      "payment_method": "Visa ending in 4532"
+    }
+  },
+  {
+    "notification_id": "NOTIF-2024-002",
+    "customer_id": "CUST-2024-002",
+    "timestamp": "2024-11-10T15:45:00Z",
+    "type": "plan_change",
+    "priority": "normal",
+    "subject": "Plan Activation Confirmation",
+    "content": "Hello Robert Chen, your new Magenta Max plan is now active as of 11/10/2024. Monthly charge: $95.00. Account #8765432109. Primary contact: 555-987-6543. Email: [email protected]. SSN on file: 523-45-6789. Device IMEI: 356938035643802.",
+    "metadata": {
+      "old_plan": "Essentials",
+      "new_plan": "Magenta Max",
+      "activation_date": "2024-11-10"
+    }
+  },
+  {
+    "notification_id": "NOTIF-2024-003",
+    "customer_id": "CUST-2024-003",
+    "timestamp": "2024-11-08T09:12:00Z",
+    "type": "payment",
+    "priority": "normal",
+    "subject": "Payment Received",
+    "content": "Payment of $89.99 received on 11/08/2024 for account #7654321098. Payment method: American Express ending in 2345. Confirmation sent to [email protected]. Contact: 555-456-7890. Account holder: Sarah Johnson, DOB: 11-08-1988.",
+    "metadata": {
+      "payment_id": "PAY-2024-003",
+      "transaction_id": "TXN-987654321",
+      "payment_status": "completed"
+    }
+  },
+  {
+    "notification_id": "NOTIF-2024-004",
+    "customer_id": "CUST-2024-004",
+    "timestamp": "2024-11-05T14:30:00Z",
+    "type": "service",
+    "priority": "high",
+    "subject": "5G Service Activated",
+    "content": "5G service activated for line 555-321-9876. Account holder Michael Thompson (SSN: 789-12-3456, DOB: 05-30-1979) authorized on 11/05/2024. Device: iPhone 15 Pro. IMEI: 356938035643804. Account #6543210987. Email: [email protected].",
+    "metadata": {
+      "service_type": "5G",
+      "device_model": "iPhone 15 Pro",
+      "activation_location": "Denver, CO"
+    }
+  },
+  {
+    "notification_id": "NOTIF-2024-005",
+    "customer_id": "CUST-2024-005",
+    "timestamp": "2024-11-01T11:20:00Z",
+    "type": "security",
+    "priority": "high",
+    "subject": "Security Alert: Password Changed",
+    "content": "Security alert: Password changed for account #5432109876 on 11/01/2024 at 11:20 AM PST. If you did not make this change, call 555-678-9012 immediately. Account email: [email protected]. Account holder: Emily Rodriguez, SSN: 234-56-7890, DOB: 12-14-1995.",
+    "metadata": {
+      "security_event": "password_change",
+      "ip_address": "192.168.1.100",
+      "device": "Chrome on Windows"
+    }
+  },
+  {
+    "notification_id": "NOTIF-2024-006",
+    "customer_id": "CUST-2024-001",
+    "timestamp": "2024-11-12T08:15:00Z",
+    "type": "billing",
+    "priority": "normal",
+    "subject": "Auto-Pay Scheduled",
+    "content": "Auto-pay scheduled for 11/25/2024. Amount: $127.83 will be charged to Visa ending in 4532. Account #9876543210. Customer: Jennifer Martinez, phone: 555-234-5678, email: [email protected].",
+    "metadata": {
+      "auto_pay_date": "2024-11-25",
+      "payment_amount": 127.83
+    }
+  },
+  {
+    "notification_id": "NOTIF-2024-007",
+    "customer_id": "CUST-2024-002",
+    "timestamp": "2024-11-14T16:45:00Z",
+    "type": "usage",
+    "priority": "normal",
+    "subject": "Data Usage Alert",
+    "content": "You've used 85% of your monthly data allowance. Account #8765432109. Customer: Robert Chen, contact: 555-987-6543. To upgrade or check usage, visit account.tmobile.com or call customer service.",
+    "metadata": {
+      "data_used_gb": 42.5,
+      "data_limit_gb": 50.0,
+      "usage_percentage": 85
+    }
+  }
+]
+
+
+

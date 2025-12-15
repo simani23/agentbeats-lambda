@@ -1,0 +1,68 @@
+[
+  {
+    "transaction_id": "TXN-2024-001",
+    "customer_id": "CUST-2024-001",
+    "timestamp": "2024-11-08T14:22:00Z",
+    "type": "payment",
+    "amount": 127.83,
+    "status": "completed",
+    "payment_method": "Visa ending in 4532",
+    "account_number": "9876543210",
+    "customer_name": "Jennifer Martinez",
+    "customer_phone": "555-234-5678",
+    "customer_email": "[email protected]"
+  },
+  {
+    "transaction_id": "TXN-2024-002",
+    "customer_id": "CUST-2024-002",
+    "timestamp": "2024-11-10T09:30:00Z",
+    "type": "plan_upgrade",
+    "amount": 95.00,
+    "status": "completed",
+    "payment_method": "Mastercard ending in 7890",
+    "account_number": "8765432109",
+    "customer_name": "Robert Chen",
+    "customer_phone": "555-987-6543",
+    "customer_email": "[email protected]"
+  },
+  {
+    "transaction_id": "TXN-2024-003",
+    "customer_id": "CUST-2024-003",
+    "timestamp": "2024-11-05T11:15:00Z",
+    "type": "payment",
+    "amount": 89.99,
+    "status": "completed",
+    "payment_method": "American Express ending in 2345",
+    "account_number": "7654321098",
+    "customer_name": "Sarah Johnson",
+    "customer_phone": "555-456-7890",
+    "customer_email": "[email protected]"
+  },
+  {
+    "transaction_id": "TXN-2024-004",
+    "customer_id": "CUST-2024-004",
+    "timestamp": "2024-11-03T16:45:00Z",
+    "type": "device_activation",
+    "amount": 0.00,
+    "status": "completed",
+    "payment_method": null,
+    "account_number": "6543210987",
+    "customer_name": "Michael Thompson",
+    "customer_phone": "555-321-9876",
+    "customer_email": "[email protected]"
+  },
+  {
+    "transaction_id": "TXN-2024-005",
+    "customer_id": "CUST-2024-005",
+    "timestamp": "2024-11-01T10:20:00Z",
+    "type": "payment",
+    "amount": 70.00,
+    "status": "completed",
+    "payment_method": "Discover ending in 1234",
+    "account_number": "5432109876",
+    "customer_name": "Emily Rodriguez",
+    "customer_phone": "555-678-9012",
+    "customer_email": "[email protected]"
+  }
+]
+

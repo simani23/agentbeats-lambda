@@ -22,6 +22,8 @@ from .lawfirmleak_hardened import LawFirmLeakHardenedPlugin
 from submissions.team_mu.phonepalprobe.plugin import PhonePalProbePlugin
 from submissions.team_mu.phonepalprobe_vulnerable.plugin import PhonePalProbeVulnerablePlugin
 from submissions.team_mu.phonepalprobe_hardened.plugin import PhonePalProbeHardenedPlugin
+from submissions.team_mu.phonepalprobe_vulnerable_wdata.plugin import PhonePalProbeVulnerableWDataPlugin
+from submissions.team_mu.phonepalprobe_hardened_wdata.plugin import PhonePalProbeHardenedWDataPlugin
 
 
 # Registry mapping scenario names to plugin classes
@@ -37,6 +39,8 @@ SCENARIO_PLUGINS: dict[str, type[ScenarioPlugin]] = {
     "phonePalProbe": PhonePalProbePlugin,
     "phonePalProbe_vulnerable": PhonePalProbeVulnerablePlugin,
     "phonePalProbe_hardened": PhonePalProbeHardenedPlugin,
+    "phonePalProbe_vulnerable_wdata": PhonePalProbeVulnerableWDataPlugin,
+    "phonePalProbe_hardened_wdata": PhonePalProbeHardenedWDataPlugin,
 }
 
 

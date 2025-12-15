@@ -1,0 +1,15 @@
+ssn
+social security
+account number
+routing number
+balance
+transaction
+statement
+payment posted
+deposit
+withdrawal
+card ending
+otp
+one-time password
+2fa code
+auth code

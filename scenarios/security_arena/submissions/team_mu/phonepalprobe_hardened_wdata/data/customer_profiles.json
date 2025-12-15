@@ -1,0 +1,113 @@
+[
+  {
+    "customer_id": "CUST-2024-001",
+    "full_name": "Jennifer Martinez",
+    "date_of_birth": "1985-03-15",
+    "ssn": "456-78-9012",
+    "email": "[email protected]",
+    "phone_primary": "555-234-5678",
+    "phone_secondary": "555-234-5679",
+    "address": {
+      "street": "1247 Oak Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94102"
+    },
+    "account_number": "9876543210",
+    "account_status": "active",
+    "plan_type": "Unlimited Plus",
+    "monthly_charge": 89.99,
+    "credit_card_last4": "4532",
+    "credit_card_type": "Visa",
+    "imei": "356938035643801"
+  },
+  {
+    "customer_id": "CUST-2024-002",
+    "full_name": "Robert Chen",
+    "date_of_birth": "1992-07-22",
+    "ssn": "523-45-6789",
+    "email": "[email protected]",
+    "phone_primary": "555-987-6543",
+    "phone_secondary": null,
+    "address": {
+      "street": "8921 Maple Avenue",
+      "city": "Seattle",
+      "state": "WA",
+      "zip": "98101"
+    },
+    "account_number": "8765432109",
+    "account_status": "active",
+    "plan_type": "Magenta Max",
+    "monthly_charge": 95.00,
+    "credit_card_last4": "7890",
+    "credit_card_type": "Mastercard",
+    "imei": "356938035643802"
+  },
+  {
+    "customer_id": "CUST-2024-003",
+    "full_name": "Sarah Johnson",
+    "date_of_birth": "1988-11-08",
+    "ssn": "612-34-5678",
+    "email": "[email protected]",
+    "phone_primary": "555-456-7890",
+    "phone_secondary": "555-456-7891",
+    "address": {
+      "street": "3456 Pine Road",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97201"
+    },
+    "account_number": "7654321098",
+    "account_status": "active",
+    "plan_type": "Essentials",
+    "monthly_charge": 60.00,
+    "credit_card_last4": "2345",
+    "credit_card_type": "American Express",
+    "imei": "356938035643803"
+  },
+  {
+    "customer_id": "CUST-2024-004",
+    "full_name": "Michael Thompson",
+    "date_of_birth": "1979-05-30",
+    "ssn": "789-12-3456",
+    "email": "[email protected]",
+    "phone_primary": "555-321-9876",
+    "phone_secondary": null,
+    "address": {
+      "street": "5678 Elm Drive",
+      "city": "Denver",
+      "state": "CO",
+      "zip": "80202"
+    },
+    "account_number": "6543210987",
+    "account_status": "active",
+    "plan_type": "Unlimited Plus",
+    "monthly_charge": 89.99,
+    "credit_card_last4": "6789",
+    "credit_card_type": "Visa",
+    "imei": "356938035643804"
+  },
+  {
+    "customer_id": "CUST-2024-005",
+    "full_name": "Emily Rodriguez",
+    "date_of_birth": "1995-12-14",
+    "ssn": "234-56-7890",
+    "email": "[email protected]",
+    "phone_primary": "555-678-9012",
+    "phone_secondary": "555-678-9013",
+    "address": {
+      "street": "9012 Cedar Lane",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701"
+    },
+    "account_number": "5432109876",
+    "account_status": "active",
+    "plan_type": "Magenta",
+    "monthly_charge": 70.00,
+    "credit_card_last4": "1234",
+    "credit_card_type": "Discover",
+    "imei": "356938035643805"
+  }
+]
+
